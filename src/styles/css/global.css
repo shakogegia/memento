@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./typography.css";
+
+html, body, #___gatsby, #gatsby-focus-wrapper {
+  height: 100%;
+}
+
+[fill="rgb(0,0,0)"] {
+  fill: transparent;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}

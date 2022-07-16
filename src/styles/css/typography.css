@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "iAWriterDuospace";
+  font-display: fallback;
+  src: url("../fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Regular.woff2") format("woff2"),
+       url("../fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Regular.woff") format("woff");
+}
+
+/* BPG 2017 DejaVuSansMono */
+@font-face {
+  font-family: "DejaVuSansMono";
+  src: url("../fonts/DejaVuSansMono/DejaVuSansMono.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BPG Typewriter";
+  font-weight: bold;
+  src: url("../fonts/BPG_Typewriter/BPG_Typewriter.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "DM Ilia UNI";
+  src: url("../fonts/DM-Ilia-UNI.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DM Ambrosi UNI";
+  src: url("../fonts/DM-Ambrosi-UNI.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DM Luarsab Andronikashvili";
+  src: url('../fonts/andronikashvili.woff2') format('woff2'),
+        url('../fonts/andronikashvili.woff') format('woff');
+}
+
+.iAWriterDuospace {
+  font-family: "iAWriterDuospace";
+}
+
+.DejaVuSansMono {
+  font-family: "DejaVuSansMono";
+}
+
+/* BPG 2017 BPG Typewriter */
+.BPGTypewriter {
+  font-family: "BPG Typewriter";
+}
+
+/* BPG 2017 DM Ilia UNI */
+.DMIliaUNI {
+  font-family: "DM Ilia UNI";
+}
+
+/* BPG 2017 DM Ambrosi UNI */
+.DMAmbrosiUNI {
+  font-family: "DM Ambrosi UNI";
+}
+
+.IliaDuospace {
+  font-family: "DM Ilia UNI", "iAWriterDuospace";
+}
+
+.AmbrosiDuospace {
+  font-family: "DM Ambrosi UNI", "iAWriterDuospace";
+}
+
+.DejavuDuespace {
+  font-family: "DejaVuSansMono", "iAWriterDuospace";
+}
+
+.andronikashvili {
+  font-family: "DM Luarsab Andronikashvili";
+}
