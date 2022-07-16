@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React, { PropsWithChildren } from 'react'
 import classNames from '../utils/classnames'
+import { IoSearchOutline } from 'react-icons/io5'
 
 export default function Header() {
   return (
@@ -15,6 +16,9 @@ export default function Header() {
 
         <ul className="flex DMIliaUNI md:space-x-3">
           <NavLink to="/">წერილები</NavLink>
+          <NavButton className='hidden sm:mr-4 sm:block' onClick={() => trigger('?')}>
+            <IoSearchOutline className="text-xl color" />
+          </NavButton>
         </ul>
       </nav>
     </header>
@@ -36,4 +40,21 @@ function NavLink({ to, children, className }: PropsWithChildren<{ to: string; cl
       </Link>
     </li>
   )
+}
+
+function NavButton(props: PropsWithChildren<{ className?: string; onClick: () => void }>) {
+  return (
+    <button
+      className={classNames('outline-none text-xl transition-colors text-gray-500 dark:text-gray-300', props.className)}
+      onClick={props.onClick}
+    >
+      {props.children}
+    </button>
+  )
+}
+
+
+
+function trigger(key: string, metaKey = true) {
+  window.dispatchEvent(new KeyboardEvent('keydown', { key, metaKey }))
 }
