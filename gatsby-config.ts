@@ -2,10 +2,10 @@ import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `ზოლიანი პანდა`,
+    title: `მემენტო`,
     description: "",
-    siteUrl: `https://zolianipanda.ge`,
-    titleTemplate: '%s · ზოლიანი პანდა',
+    siteUrl: `https://memento.ge`,
+    titleTemplate: '%s · მემენტო',
     image: './src/images/favicon.png',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.

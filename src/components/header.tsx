@@ -10,7 +10,7 @@ export default function Header() {
           to="/"
           className="DMIliaUNI text-xl"
         >
-          ზოლიანი პანდა
+          მემენტო
         </Link>
 
         <ul className="flex DMIliaUNI md:space-x-3">
