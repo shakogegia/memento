@@ -66,14 +66,14 @@ const config: GatsbyConfig = {
         name: 'blog',
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: 'UA-110098374-1',
-    //     head: false,
-    //     exclude: ['/preview/**'],
-    //   },
-    // }
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'G-1BZR5WC68N',
+        head: false,
+        exclude: ['/preview/**'],
+      },
+    }
   ],
 }
 
