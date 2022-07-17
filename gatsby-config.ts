@@ -67,13 +67,15 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        trackingId: 'G-1BZR5WC68N',
-        head: false,
-        exclude: ['/preview/**'],
+        id: "GTM-M95NPZL",
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" },
+        // // Defaults to false
+        // enableWebVitalsTracking: true,
       },
-    }
+    },
   ],
 }
 
