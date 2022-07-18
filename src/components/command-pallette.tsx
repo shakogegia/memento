@@ -225,13 +225,13 @@ const PAGES = [
     name: 'Dark',
     parent: 'theme',
     keywords: 'dark',
-    perform: () => console.log(),
+    perform: () => (window as any).__setPreferredTheme('dark'),
   },
   {
     id: 'light',
     name: 'Light',
     parent: 'theme',
     keywords: 'light',
-    perform: () => console.log(),
+    perform: () => (window as any).__setPreferredTheme('light'),
   },
 ]
