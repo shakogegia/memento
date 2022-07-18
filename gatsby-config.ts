@@ -3,7 +3,8 @@ import type { GatsbyConfig } from 'gatsby'
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `მემენტო`,
-    description: "",
+    description:
+      'ჩანაწერები, წერილები და ესეები სხვადასხვა თემაზე, ძირითადად ფოტოგრაფიაზე, წიგნებზე და სხვადასხვა side-პროექტებზე',
     siteUrl: `https://memento.ge`,
     titleTemplate: '%s · მემენტო',
     image: './src/images/favicon.png',
@@ -67,11 +68,11 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: "gatsby-plugin-google-tagmanager",
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: "GTM-M95NPZL",
+        id: 'GTM-M95NPZL',
         includeInDevelopment: false,
-        defaultDataLayer: { platform: "gatsby" },
+        defaultDataLayer: { platform: 'gatsby' },
         // // Defaults to false
         // enableWebVitalsTracking: true,
       },

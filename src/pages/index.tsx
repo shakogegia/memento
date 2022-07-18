@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 
-export default function NotesPage({ data: { allMdx } }: any) {
+export default function NotesPage({ data: { allMdx, site } }: any) {
   const posts = allMdx.edges.map((edge: any) => edge.node).filter((post: any) => post !== undefined)
 
   return (
@@ -14,7 +14,7 @@ export default function NotesPage({ data: { allMdx } }: any) {
         <div className="flex flex-col align-center text-center">
           <span className="text-9xl">📜</span>
           <h2 className=" mt-6 text-3xl transition-colors IliaDuospace text-gray-600 dark:text-gray-200">წერილები</h2>
-          <h6 className=" mt-4 max-w-md mx-auto text-md transition-colors text-gray-400 dark:text-gray-400">ჩანაწერები, წერილები და ესეები სხვადასხვა თემაზე, ძირითადად ფოტოგრაფიაზე, წიგნებზე და სხვადასხვა side-პროექტებზე</h6>
+          <h6 className=" mt-4 max-w-md mx-auto text-md transition-colors text-gray-400 dark:text-gray-400">{site.siteMetadata.description}</h6>
         </div>
 
         <div className="mt-12 flex flex-col space-y-8">
@@ -37,6 +37,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMdx(
