@@ -13,7 +13,7 @@ export default function NotesPage({ data: { allMdx } }: any) {
       <div className="max-w-3xl m-auto">
         <div className="flex flex-col align-center text-center">
           <span className="text-9xl">📜</span>
-          <h2 className=" mt-6 text-3xl transition-colors andronikashvili text-gray-600 dark:text-gray-200">წერილები</h2>
+          <h2 className=" mt-6 text-3xl transition-colors IliaDuospace text-gray-600 dark:text-gray-200">წერილები</h2>
           <h6 className=" mt-4 max-w-md mx-auto text-md transition-colors text-gray-400 dark:text-gray-400">ჩანაწერები, წერილები და ესეები სხვადასხვა თემაზე, ძირითადად ფოტოგრაფიაზე, წიგნებზე და სხვადასხვა side-პროექტებზე</h6>
         </div>
 

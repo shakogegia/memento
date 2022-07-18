@@ -9,13 +9,12 @@ export default function Header() {
       <nav className="container mx-auto md:max-w-5xl flex items-center justify-between p-6">
         <Link
           to="/"
-          className="DMIliaUNI text-xl"
+          className="DMIliaUNI text-xl dark:text-gray-100"
         >
           მემენტო
         </Link>
 
         <ul className="flex DMIliaUNI md:space-x-3">
-          <NavLink to="/">წერილები</NavLink>
           <NavButton className='hidden sm:mr-4 sm:block' onClick={() => trigger('?')}>
             <IoSearchOutline className="text-xl color" />
           </NavButton>

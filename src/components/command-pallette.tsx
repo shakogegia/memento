@@ -33,10 +33,7 @@ export default function CommandPallette(props: PropsWithChildren<{}>) {
 
   const actions = useMemo<Action[]>(() => {
     const items = [
-      ...PAGES.map((page: any) => ({
-        ...page,
-        perform: () => navigate(page.url),
-      })),
+      ...PAGES,
       {
         id: 'search',
         name: 'ძებნა',
@@ -197,5 +194,44 @@ const PAGES = [
     keywords: 'search',
     icon: <IoSearch />,
     shortcut: ['?'],
+  },
+  {
+    id: 'email',
+    name: 'Email',
+    section: 'Contact',
+    shortcut: ['g', 'c'],
+    keywords: 'email',
+    icon: <IoMail />,
+    perform: () => navigate(`mailto:shalva.gegia@gmail.com?subject=Hi`),
+  },
+  {
+    id: 'twitter',
+    name: 'Twitter',
+    section: 'Contact',
+    shortcut: ['g', 't'],
+    keywords: 'twitter',
+    icon: <IoTwitter />,
+    perform: () => navigate(`https://twitter.com/@ShalvaGegia`),
+  },
+  {
+    id: 'theme',
+    name: 'Theme',
+    section: 'Preferences',
+    icon: <IoColor />,
+    keywords: 'change theme',
+  },
+  {
+    id: 'dark',
+    name: 'Dark',
+    parent: 'theme',
+    keywords: 'dark',
+    perform: () => console.log(),
+  },
+  {
+    id: 'light',
+    name: 'Light',
+    parent: 'theme',
+    keywords: 'light',
+    perform: () => console.log(),
   },
 ]
