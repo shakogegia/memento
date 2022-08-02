@@ -31,11 +31,11 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev } 
           </em>
         </div>
 
-        <div className="py-20">
+        <div className="my-20">
           <div className="w-full border-t border-gray-100 transition-colors dark:border-gray-600"></div>
         </div>
 
-        <div className="py-20">
+        <div className="mt-10 mb-20">
           <Disqus
             config={{
               url: `${site.siteMetadata.siteUrl}/${mdx.frontmatter.slug}`,
