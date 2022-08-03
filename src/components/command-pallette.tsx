@@ -41,7 +41,7 @@ export default function CommandPallette(props: PropsWithChildren<{}>) {
         icon: <IoSearch />,
         section: 'Navigation',
         shortcut: ['?'],
-      }
+      },
     ]
 
     if (allMdx.edges.length > 0) {
@@ -55,6 +55,23 @@ export default function CommandPallette(props: PropsWithChildren<{}>) {
         })
       })
     }
+
+    const drafts = Object.keys(localStorage)
+
+    drafts
+      .filter((key) => key.startsWith('draft_'))
+      .map((key) => key.split('_')[1])
+      .filter((id) => id)
+      .map((key) => {
+        const draft = `Draft - ${key}`
+        items.push({
+          id: draft,
+          name: draft,
+          keywords: `draft ${key}`,
+          perform: () => navigate(`/draft?id=${key}`),
+          section: 'Drafts',
+        })
+      })
 
     return items
   }, [site, allMdx])
@@ -120,7 +137,7 @@ function RenderResults() {
                 </span>
               )}
 
-              <span className='iAWriterDuospace'>{item.name}</span>
+              <span className="iAWriterDuospace">{item.name}</span>
             </div>
 
             <div className="flex gap-1">
