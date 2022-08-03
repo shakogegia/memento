@@ -26,7 +26,7 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev } 
         </div>
 
         <div className="mt-14">
-          <em className="font-extralight italic iAWriterDuospaceItalic text-gray-400">
+          <em className="font-extralight italic text-gray-400">
             Published on {mdx.frontmatter.date}
           </em>
         </div>
