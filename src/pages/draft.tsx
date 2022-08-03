@@ -21,7 +21,6 @@ export default function Post(props: any) {
     document.body.appendChild(script);
     
     script.onload = () => {
-      if (simplemde.current) return
       // @ts-ignore
       simplemde.current = new SimpleMDE({
         element: document.getElementById('content'),
@@ -47,7 +46,7 @@ export default function Post(props: any) {
         },
       })
     };
-  }, [])
+  }, [uniqueId])
 
   return (
     <Layout>
